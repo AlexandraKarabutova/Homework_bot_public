@@ -31,7 +31,6 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 TELEGRAM_RETRY_TIME: int = 600
-# TIMESTAMP: int = 1657929600
 
 HEADERS = {'Authorization': f'OAuth {PRACTICUM_TOKEN}'}
 
@@ -158,7 +157,6 @@ def main():
 
     while True:
         try:
-            # current_timestamp = TIMESTAMP
             response = get_api_answer(current_timestamp)
             if response['homeworks'] != response_homeworks and response['homeworks'][0] not in response_homeworks:
                 homework = check_response(response)
