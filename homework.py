@@ -158,7 +158,10 @@ def main():
     while True:
         try:
             response = get_api_answer(current_timestamp)
-            if response['homeworks'] != response_homeworks and response['homeworks'][0] not in response_homeworks:
+            logger.debug(f'response_homeworks: {response_homeworks}')
+            res_homeworks = response['homeworks']
+            logger.debug(f'res_homeworks: {res_homeworks}')
+            if response['homeworks'] != response_homeworks:
                 homework = check_response(response)
                 message = parse_status(homework)
                 send_message(bot, message)
