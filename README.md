@@ -1,5 +1,5 @@
-## Бот для проверки статуса ревью при использовании API Яндекс Практикум
+## A bot for checking the review status when using the Yandex Practicum API.
 
-Телеграмм бот в автоматическом режиме каждые 10 минут направляет запрос к API сервису ЯП и получении ответа сравнивает статус проекта, находящегося на ревью с последним полученным ответом. При наличии изменений Телеграмм бот отправляет сообщение об изменении (проект принят на ревью, возвращен с правками или принят) в телеграмм чат.
+A Telegram bot operates automatically, sending a request to the Yandex Practicum API every 10 minutes. Upon receiving a response, it compares the status of the project under review with the last received response. If there are changes, the Telegram bot sends a message to the Telegram chat regarding the change (project accepted for review, returned with amendments, or accepted).
 
-В проекте реализовано логирование ошибок. Об ошибках бот также отправляет сообщение в телеграмм чат.
+Error logging is implemented in the project. The bot also sends a message to the Telegram chat about any errors encountered.
